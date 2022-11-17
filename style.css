@@ -52,6 +52,7 @@ section {
 
 #stats {
     display: flex;
+    align-items: center;
     gap: 60px;
 }
 .stats h1 {
@@ -81,7 +82,58 @@ section {
     opacity: 0.8;
 }
 
-
 .image-mobile {
     display: none;
+}
+
+
+/* ############# Mobile Version ############# */
+
+@media screen and (max-width: 500px) {
+
+    body {
+        padding: 40px 20px;
+        min-width: 375px;
+    }
+    
+    #container {
+       display: block;
+    }
+    
+    section {
+        display: flex;
+        flex-direction: column-reverse;       
+    }
+    section:nth-of-type(2) {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .card {
+        padding: 30px 25px;
+    }
+    .hero-text h1 {
+        font-size: 1.7rem;
+        line-height: 2rem;
+        text-align: center;
+    }
+    .hero-description p {
+        text-align: center;
+        font-size: 1rem;
+        margin-bottom: 35px;
+    }
+
+    #stats {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .image-desktop {
+        display: none;
+    }
+
+    .image-mobile {
+        display: block;
+    }
+
 }
